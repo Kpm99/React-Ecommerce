@@ -1,0 +1,50 @@
+
+.icon{
+    text-align: center;
+}
+
+.sort-container{
+    width: 50%;
+}
+
+option{
+    font-family: 'sans-serif';
+    padding: 5px;
+    font-size: large;
+}
+
+select{
+font-size: medium;
+border: 2px solid rgb(98 84 243);
+padding: 5px;
+}
+
+button{
+    width: 8%;
+    border: none; 
+    margin: 0px 10px;
+}
+.icon-grid{
+    text-align: center;
+}
+.icon-list{
+    text-align: center;
+}
+
+.button-color-selected{
+    color: white;
+    background-color: black;
+}
+
+.button-color-default{
+     color: black;
+    background-color: lightgray;
+}
+
+.sort{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    justify-content: space-evenly;
+   
+}

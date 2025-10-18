@@ -1,0 +1,24 @@
+.image-component {
+  display: flex;
+}
+
+.side-image {
+  display: flex;
+  width: 60%;
+  margin-bottom: 2rem;
+}
+
+.side-images {
+  display: flex;
+  height: 10vh;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.main-image {
+  display: flex;
+  width: 150%;
+  margin-left: 1rem;
+  height: 80%;
+}

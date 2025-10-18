@@ -1,0 +1,28 @@
+
+
+.feature-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    margin: 0;
+    
+}
+
+.feature-repeater{
+    text-align: left;
+
+}
+.feature-heading{
+    padding: 0% 0% 5% 14%;
+}
+
+h2{
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: medium;
+}
+
+h3{
+    color: blueviolet;
+}

@@ -1,0 +1,30 @@
+.product-card {
+    border: 0.1rem solid whitesmoke;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    width: 25rem;
+    height: 21rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    transition: all 0.3s linear;
+    padding: 10px;
+}
+.category-div{
+    height: 10%;
+    border-radius: 50px;
+    left: 25%;
+    position: relative;
+    bottom: 85%;
+}
+
+.category-text{
+    font-size: 1.2rem;
+    padding: 5px 20px;
+    border-radius: 50px;
+    background-color: whitesmoke;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+}

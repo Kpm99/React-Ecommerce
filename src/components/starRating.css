@@ -1,0 +1,13 @@
+.star-rating{
+    display: flex;
+  
+}
+
+.star{
+    color: gold;
+    
+}
+
+.reviews{
+    margin:0 0rem 0rem 1rem;
+}

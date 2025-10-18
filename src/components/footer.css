@@ -1,0 +1,133 @@
+.footer {
+    background-color: rgb(2, 2, 48);
+    width: 100%;
+    height: auto;
+}
+
+.footer-about {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.upper-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    width: 100%;
+    gap: 5rem;
+    color: white;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom:5%;
+}
+
+.icon{
+    width: 2rem;
+    height: 2rem;
+}
+
+.icons{
+    width: 40%;
+    height: 40%;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius:100px ;
+    padding: 10px;
+}
+
+.footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-subscribe input {
+    padding: 0.5rem 1rem;
+    width: 70%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.footer-subscribe button {
+    width: 40%;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+
+}
+
+/* @media screen and (max-width: 768px) {
+    .upper-section {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem 0;
+    }
+
+    .footer-about {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-social-icons {
+        justify-content: center;
+    }
+
+    .footer-subscribe input,
+    .footer-subscribe button {
+        width: 100%;
+    }
+
+    .footer-subscribe {
+        align-items: center;
+    }
+
+    .icon,
+    .icons {
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 8px;
+    }
+} */
+
+
+@media screen and (max-width: 768px) {
+    .upper-section {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem 0;
+    }
+
+    .footer-about {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 0.5rem 0;
+        width: 100%;
+    }
+
+    .icon,
+    .icons {
+        width: 2.8rem;
+        height: 2.8rem;
+        padding: 10px;
+        box-sizing: content-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

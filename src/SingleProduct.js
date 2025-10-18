@@ -1,6 +1,85 @@
 import styled from "styled-components";
+import React from 'react'
+import { useEffect } from "react";
+import { useGlobalContext } from "./context/context";
+import { useParams } from "react-router-dom";
+import ProductImage from "./components/ProductImage";
+import Navigator from "./components/Navigator";
+import PriceFormatter from "./helper/PriceFormatter";
+import { LuTruck } from "react-icons/lu"
+import { GiCheckedShield } from "react-icons/gi";
+import { MdOutlineSwapVerticalCircle } from "react-icons/md";
+import ImageComponent from "./components/ImageComponent";
+import ColorPicker from "./components/ColorPicker";
+import StarRating from "./components/StarRating";
+import AddtoCart from "./components/AddtoCart";
+import "./singleProduct.css"
+const SingleProduct = () => {
+  const { id } = useParams();
+  //let id = new URLSearchParams(queryString);
+  const { loadSingleProduct, singleProductLoading,
+    singleProductError, singleProduct } = useGlobalContext();
+  console.log("id", id);
+  console.log("singleProductLoading", singleProduct);
 
-return <Wrapper></Wrapper>;
+  const { id: alias, name, company, price, description } = singleProduct
+
+
+  useEffect(() => {
+    loadSingleProduct(`https://api.pujakaitem.com/api/products/${id}`);
+  }, [id]);
+
+  return <Wrapper>
+
+    <Navigator name={name} />
+    <div className="container">
+      <div className="product-image">
+        <ImageComponent image={singleProduct.image} />
+      </div>
+
+      <div className="product-data">
+        <h2>{name}</h2>
+        <StarRating stars={singleProduct.stars} reviews={singleProduct.reviews} />
+        <p>{singleProduct.reviews} reviews</p>
+        <del>
+          {<PriceFormatter number={price + 250000} />}
+        </del>
+        <p className="deal-para">Deal of the Day : {<PriceFormatter number={singleProduct.price} />}</p>
+        <p>{singleProduct.description}</p>
+        <div className="product-features">
+          <div className="feature-div">
+            <LuTruck className="feature-icon" />
+            <p className="feature-para">Free Delivery</p>
+          </div>
+          <div className="feature-div">
+            <MdOutlineSwapVerticalCircle className="feature-icon" />
+            <p className="feature-para">30 Day Replacement</p>
+          </div>
+          <div className="feature-div">
+            <LuTruck className="feature-icon" />
+            <p className="feature-para">Free Shipping</p>
+          </div>
+          <div className="feature-div">
+            <GiCheckedShield className="feature-icon" />
+            <p className="feature-para">2 year warranty</p>
+          </div>
+        </div>
+        <p>{singleProduct?.stock > 0 ? `Available : ${singleProduct.stock}` : `${<b>Product Out of Stock</b>}`}</p>
+        <p>ID : <b>{singleProduct.id}</b></p>
+        <p>Brand : <b>{singleProduct.company}</b></p>
+        <hr />
+
+        <ColorPicker productData={singleProduct} />
+        <AddtoCart productData={singleProduct}/>
+      </div>
+    </div>
+
+  </Wrapper>;
+}
+
+
+
+
 
 const Wrapper = styled.section`
   .container {
